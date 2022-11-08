@@ -1,0 +1,202 @@
+/*
+ * @NOTE: Prepend a `~` to css file paths that are in your node_modules
+ *        See https://github.com/webpack-contrib/sass-loader#imports
+ */
+/* body {
+    position: relative;
+    background-color: #cfcdcd;
+    height: 100vh;
+    /* background: linear-gradient(
+    200.96deg,
+    #fedc2a -29.09%,
+    #dd5789 51.77%,
+    #7a2c9e 129.35%
+  ); */
+/* font-family: system-ui;
+    overflow-y: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center; */
+/* }  */
+
+
+
+/* Position and sizing of burger button */
+.bm-burger-button {
+    position: fixed;
+    width: 36px;
+    height: 30px;
+    left: 36px;
+    top: 36px;
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+    background: #EAEAEA;
+}
+
+/* Color/shape of burger icon bars on hover*/
+.bm-burger-bars-hover {
+    background: #a90000;
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+    height: 24px;
+    width: 24px;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+    background: #bdc3c7;
+}
+
+/*
+Sidebar wrapper styles
+Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
+*/
+.bm-menu-wrap {
+    /* position: fixed; */
+    left: 0px;
+    top: 0;
+    height: 100%;
+    width: 250px;
+}
+
+/* General sidebar styles */
+.bm-menu {
+    background: #EAEAEA;
+    padding: 2.5em 1.5em 0;
+    font-size: 1.15em;
+    overflow: inherit !important;
+}
+
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+    fill: #EAEAEA;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+    color: #b8b7ad;
+    padding: 0.8em;
+}
+
+/* Individual item */
+.bm-item {
+    color: black;
+    display: inline-block;
+}
+
+/* Styling of overlay */
+.bm-overlay {
+    left: 0px;
+    top: 0;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+
+.navbar {
+    height: var(--nav-size);
+    background-color: var(--bg);
+    padding: 0 1rem;
+    border-bottom: var(--border);
+}
+
+/* <ul> */
+.navbar-nav {
+    max-width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.session {
+    border-radius: 25px;
+    border: 2px solid var(--text-color);
+    padding: 20px;
+    width: 400px;
+    color: var(--text-color);
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    /* height: 150px; */
+}
+
+.quantity-picker {
+    display: inline-flex;
+    border: 1px solid #dfdfdf;
+    border-radius: 10px;
+    vertical-align: middle;
+    width: 128px;
+    margin-left: 132px;
+    /* margin: auto; */
+    /* margin: inherit */
+}
+
+.quantity-input:focus {
+    background: red;
+}
+
+.quantity-modifier,
+
+
+.quantity-modifier {
+    height: 100%;
+    width: 3rem;
+    font-size: 1.5rem;
+    background: #f3f3f3;
+    color: #888;
+    border: 0 solid #dbdbdb;
+    text-align: center;
+    cursor: pointer;
+}
+
+.quantity-modifier:hover {
+    background: #dadada;
+    color: #555555;
+}
+
+.quantity-modifier:focus {
+    outline: 0;
+}
+
+.left-modifier {
+    border-radius: 3px 0 0 3px;
+}
+
+.mod-disable {
+    color: #E0E0E0;
+}
+
+.mod-disable:hover {
+    background-color: #f3f3f3 !important;
+    color: #E0E0E0;
+}
+
+.right-modifier {
+    border-radius: 0 3px 3px 0;
+}
+
+.quantity-display {
+    width: 4rem;
+    padding: .9rem;
+    font-size: 1.5rem;
+    border: 0;
+    border-top: 0 solid #dbdbdb;
+    border-bottom: 0 solid #dbdbdb;
+    text-align: center;
+}
+
+/* .quantity-display {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    outline: none;
+    padding: 0.9rem;
+    background: transparent;
+    color: white;
+} */
