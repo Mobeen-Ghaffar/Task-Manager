@@ -3,7 +3,9 @@ body {
   background: #151616;
   font-family: roboto;
   -webkit-font-smoothing: antialiased;
+  overflow: hidden;
   -moz-osx-font-smoothing: grayscale;
+
 }
 
 code {
@@ -103,7 +105,8 @@ a {
 .dropdown {
   position: absolute;
   top: 58px;
-  width: 300px;
+  width: 252px;
+  /* 286px */
   transform: translateX(-45%);
   background-color: var(--bg);
   border: var(--border);
@@ -118,7 +121,7 @@ a {
 }
 
 .menu-item {
-  height: 50px;
+  height: 40px;
   display: flex;
   align-items: center;
   border-radius: var(--border-radius);

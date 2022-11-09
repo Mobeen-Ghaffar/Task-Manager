@@ -5,7 +5,7 @@ import  { ReactComponent as PlayIcon } from '../../../assets/icons/play.svg';
     console.log("here");
   }
 
-const CardWithSession = () => (
+const CardWithTasks = () => (
 
 
   <div className="session">
@@ -31,4 +31,4 @@ const CardWithSession = () => (
   
 );
 
-export default React.memo(CardWithSession);
+export default React.memo(CardWithTasks);
