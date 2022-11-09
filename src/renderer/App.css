@@ -306,7 +306,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 #mainbody::-webkit-scrollbar {
     width: 10px;
-    background-color: #F5F5F5;
+    background-color: black;
 }
 
 #mainbody::-webkit-scrollbar-thumb {
@@ -314,7 +314,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
     background-image: -webkit-gradient(linear,
             left bottom,
             left top,
-            color-stop(0.44, #dadce1),
+            color-stop(0.44, #474a4d),
             color-stop(0.72, #484a4d),
             color-stop(0.86, #242526));
 }
