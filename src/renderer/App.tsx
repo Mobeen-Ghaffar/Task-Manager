@@ -5,6 +5,8 @@ import React from 'react';
 import { Form, Button, Row, Col } from 'react-bootstrap'
 import CardWithSession from './session/card-with-session'
 import CardWithTasks from './session/card-with-tasks'
+import CardWithProgress from './session/card-with-progress'
+// CardWithProgress
 import  Apps from './component/Navigation'
 // import SimpleBar from 'simplebar-react';
 // import 'simplebar-react/dist/simplebar.min.css';
@@ -47,21 +49,14 @@ const Hello = () => {
     <Apps></Apps>
 
     <div id="mainbody" className='#style-8'>
+      {/* <div > */}
       <CardWithSession />
       <CardWithTasks />
-      <CardWithTasks />
-      <CardWithTasks />
-      <CardWithTasks />
-      <CardWithTasks />
-      <CardWithTasks />
-      <CardWithTasks />
-      <CardWithTasks />
-      <CardWithTasks />
-      <CardWithTasks />
-      <CardWithTasks />
-      <CardWithTasks />
-      <CardWithTasks />
-      <CardWithTasks />
+      {/* </div>
+      <div> */}
+      <CardWithProgress/>
+      {/* </div> */}
+     
 
     </div>
     
