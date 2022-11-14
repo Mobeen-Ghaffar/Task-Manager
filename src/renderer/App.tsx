@@ -50,11 +50,15 @@ const Hello = () => {
 
     <div id="mainbody" className='#style-8'>
       {/* <div > */}
+      <div id="wrap">
       <CardWithSession />
       <CardWithTasks />
+      </div>
       {/* </div>
       <div> */}
+      <div id="wrap">
       <CardWithProgress/>
+      </div>
       {/* </div> */}
      
 

@@ -41,10 +41,10 @@ const CardWithProgress = () => (
     
     </div>
     
-      <div>Yesterday</div>
+      {/* <div>Yesterday</div>
       <div>0</div>
-      <div>mins</div>
-      <div style={{ width: 250, height: 250,margin:"auto" }}>
+      <div>mins</div> */}
+      <div style={{ width: 220, height: 220,margin:"auto" }}>
       <CircularProgressbarWithChildren value={66}  styles={
         {
     // Customize the root svg element
@@ -87,7 +87,7 @@ const CardWithProgress = () => (
   {/* Put any JSX content in here that you'd like. It'll be vertically and horizonally centered. */}
   
   <div style={{ fontSize: 12, marginTop: -5 }}>
-    
+    <strong style={{margin: "12px"}}> Daily Goal</strong><br/>
     <strong>Completed 66%</strong>
   </div>
 </CircularProgressbarWithChildren>

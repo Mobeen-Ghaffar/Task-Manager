@@ -1,6 +1,9 @@
-import React from "react";
+
 import QuantityPicker from '../component/QuantityPicker';
 import  { ReactComponent as PlayIcon } from '../../../assets/icons/play.svg';
+import React, { Component } from 'react';
+import Timer from './timer'
+// import Timer from '../component/Timer'
   const handl=()=>{
     console.log("here");
   }
@@ -25,7 +28,9 @@ const CardWithSession = () => (
        Start focus session
           </button>
   {/* <span className="icon-button"  style={{marginLeft:"auto"}}><PlayIcon></PlayIcon></span> */}
- 
+ {/* <Timer></Timer> 
+<timer></timer>*/}
+{/* <Timer></Timer> */}
   </div>
   
   
