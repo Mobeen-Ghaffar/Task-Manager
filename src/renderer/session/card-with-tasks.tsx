@@ -24,7 +24,7 @@ import Cloud from '@mui/icons-material/Cloud';
 
 const options = [
   
-  'Add Task',
+  // 'Add Task',
   'Clear Tasks',
   // 'Callisto',
 
@@ -32,7 +32,9 @@ const options = [
 
 const ITEM_HEIGHT = 48;
 
-function LongMenu() {
+// const Button: React.FunctionComponent<ButtonProps> = ({children, ...props}) => {
+const LongMenu:React.FunctionComponent<{handleClickFunction():void }> = ({...props}) => {
+const {handleClickFunction}=props;
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
   const handleClick = (event: React.MouseEvent<HTMLElement>) => {
@@ -69,12 +71,14 @@ function LongMenu() {
             width: '20ch',
           },
         }}
+
       >
-        {options.map((option) => (
-          <MenuItem key={option} selected={option === 'Pyxis'} onClick={handleClose}>
-            {option}
+        <MenuItem key={options[0]} selected={options[0] === 'Pyxis'} onClick={handleClickFunction}>
+            {options[0]}
           </MenuItem>
-        ))}
+        {/* {options.map((option) => (
+          
+        ))} */}
       </Menu>
     </div>
   );
@@ -96,7 +100,7 @@ function IconMenu() {
         <MenuItem  sx={{minHeight:"10px",paddingRight:"0px"}}>
           <ListItemIcon>
             {/* <MoreVertIcon fontSize="small"  sx={{fill: "var(--text-color)"}} /> */}
-             <LongMenu/>
+             {/* <LongMenu/> */}
           </ListItemIcon>
           {/* <ListItemText>Copy</ListItemText> */}
           {/* <Typography variant="body2" color="text.secondary">
@@ -149,6 +153,14 @@ const CardWithTasks : FC<{ }> = ({}) =>  {
   const readTasks=async() => {
     // const taskss=;
     // setTasks(taskss);
+    // setTasks([]);
+
+  }
+
+  const clearTasks=async() => {
+    // const taskss=;
+    // setTasks(taskss);
+    setTasks([]);
 
   }
 
@@ -177,7 +189,7 @@ return (
         </MenuItem>
         <MenuItem  sx={{minHeight:"10px",paddingRight:"0px"}}>
           <ListItemIcon>
-             <LongMenu/>
+             <LongMenu handleClickFunction={clearTasks}/>
           </ListItemIcon>
         </MenuItem>
       </MenuList>
