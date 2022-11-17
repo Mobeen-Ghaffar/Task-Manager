@@ -1,8 +1,9 @@
 .settings {
   display: flex;
   display: -webkit-flex;
-  justify-content: space-around;
-  margin-top: 25px;
+  justify-content: space-between;
+  margin-top: 15px;
+  /* width: 60%; */
 }
 
 .settings-section {
@@ -13,10 +14,18 @@
   font-weight: 700;
 }
 
+.break-label {
+  color: var(--text-color);
+}
+
+.session-label {
+  color: var(--text-color);
+}
+
 .settings-section button {
   font-size: 1.1rem;
   font-weight: 700;
-  border: 1px solid #4ebfc9;
+  border: 1px solid var(--text-color);
   background-color: transparent;
   color: #fff;
   border-radius: 6px;
@@ -33,7 +42,7 @@
 
 .settings-section button:not(.disable):hover {
   cursor: pointer;
-  background-color: #4ebfc9;
+  background-color: var(--text-color);
 }
 
 .settings-section button.disable {
@@ -47,7 +56,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background-color: #fff;
+  background-color: var(--text-color);
   border-radius: 50%;
   color: #444;
   margin-left: 10px;

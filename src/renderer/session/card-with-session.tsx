@@ -15,22 +15,22 @@ const CardWithSession = () => (
   <div className="align-middle align-items-center d-flex gap-2" style={{textAlign:"center",fontSize:"x-large"}} color="0x99999">
     Ready, set, focus!
   </div>
-  <div style={{textAlign:"center",fontSize:"smaller",margin:"inherit"}}>Achieve your goals and get more done with focus sessions.</div>
-  
-  <QuantityPicker min={15} max={60} />
+  {/* <div style={{textAlign:"center",fontSize:"smaller",margin:"inherit"}}>Achieve your goals and get more done with focus sessions.</div>
+   */}
+  {/* <QuantityPicker min={15} max={60} /> */}
 
-  <div style={{textAlign:"center",fontSize:"smaller",margin:"inherit"}}>You'll have no break</div>
+  {/* <div style={{textAlign:"center",fontSize:"smaller",margin:"inherit"}}>You'll have no break</div> */}
   
-    <button className="session-button border" onClick={handl}>
+    {/* <button className="session-button border" onClick={handl}>
 
         <PlayIcon style={{fill:"var(--text-color)"}}></PlayIcon>
 
        Start focus session
-          </button>
+          </button> */}
   {/* <span className="icon-button"  style={{marginLeft:"auto"}}><PlayIcon></PlayIcon></span> */}
  {/* <Timer></Timer> 
 <timer></timer>*/}
-{/* <Timer></Timer> */}
+<Timer></Timer>
   </div>
   
   

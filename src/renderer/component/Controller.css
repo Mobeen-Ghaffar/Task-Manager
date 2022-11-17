@@ -2,13 +2,14 @@
   display: flex;
   display: -webkit-flex;
   justify-content: center;
-  margin-top: 15px;
+  margin-top: 5px;
+  /* width: 60%; */
 }
 
 .controller button {
   font-size: 1.1rem;
   font-weight: 700;
-  border: 1px solid #4ebfc9;
+  border: 1px solid var(--text-color);
   background-color: transparent;
   color: #fff;
   border-radius: 6px;
@@ -21,11 +22,13 @@
   -webkit-transition: all 0.25s ease-out;
   -moz-transition: all 0.25s ease-out;
   transition: all 0.25s ease-out;
-  margin: 15px;
+  margin-top: 5px;
+  margin-left: 15px;
+  margin-right: 15px;
   text-transform: uppercase;
 }
 
 .controller button:hover {
   cursor: pointer;
-  background-color: #4ebfc9;
+  background-color: var(--text-color);
 }

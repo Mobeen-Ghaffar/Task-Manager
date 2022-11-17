@@ -122,6 +122,7 @@
     "electron-updater": "^5.2.3",
     "increaser-timepicker": "^1.0.20",
     "increaser-timer": "^1.0.8",
+    "play-sound": "^1.1.5",
     "rc-input-number": "^7.3.9",
     "react": "^18.2.0",
     "react-bootstrap": "^2.6.0",
