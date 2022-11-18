@@ -1,4 +1,7 @@
 
+## Task Manager
+Task Manager is a desktop based software. Task Manager allows you to manage daily progress by .
+
 ## Install
 
 Clone the repo and install dependencies:
@@ -37,6 +40,7 @@ npm run package
 2. Clock
 3. Github Project Management
 4. Github Issue Tracker
+5. Microsoft Task List Integration
 
 ## Maintainers
 
