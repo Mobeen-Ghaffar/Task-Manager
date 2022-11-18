@@ -4,8 +4,8 @@
 Clone the repo and install dependencies:
 
 ```bash
-git clone --depth 1 --branch main https://github.com/electron-react-boilerplate/electron-react-boilerplate.git your-project-name
-cd your-project-name
+git clone https://github.com/Mobeen-Ghaffar/Task-Manager.git
+cd Task-Manager
 npm install
 ```
 
