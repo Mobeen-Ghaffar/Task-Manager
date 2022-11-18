@@ -25,8 +25,18 @@ To package apps for the local platform:
 ```bash
 npm run package
 ```
+## Features
 
+1. Focus Session including break
+2. Task List
+3. Daily Progress
 
+## Future Plan
+
+1. Alarm
+2. Clock
+3. Github Project Management
+4. Github Issue Tracker
 
 ## Maintainers
 
