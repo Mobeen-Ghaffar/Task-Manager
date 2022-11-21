@@ -3,6 +3,10 @@
   margin-top: 25px;
 }
 
+.progress_session div {
+  z-index: -1
+}
+
 .pomodoro-clock-header-name {
   text-transform: capitalize;
   display: inline-block;

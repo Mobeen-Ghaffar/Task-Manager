@@ -54,6 +54,7 @@ const {handleClickFunction}=props;
         aria-haspopup="true"
         onClick={handleClick}
         sx={{minHeight:"10px",paddingRight:"0px"}}
+        className="overlay"
       >
         <MoreVertIcon fontSize="small" sx={{fill: "var(--text-color)"}} />
       </IconButton>
@@ -89,7 +90,7 @@ function IconMenu() {
     <Paper sx={{ width: 40, maxWidth: '100%',background:"transparent",display: "table", marginLeft: "auto" }}>
       <MenuList sx={{display: "flex",paddingTop:"0px",paddingBottom:"0px"}} >
         <MenuItem onClick={() => console.log("asdsd")} sx={{minHeight:"10px",paddingRight:"0px"}}>
-          <ListItemIcon>
+          <ListItemIcon  className="overlay">
             <AddIcon fontSize="small" sx={{fill: "var(--text-color)"}} />
           </ListItemIcon>
           {/* <ListItemText>Cut</ListItemText>
@@ -183,7 +184,7 @@ return (
        <Paper sx={{ width: 40, maxWidth: '100%',background:"transparent",display: "table", marginLeft: "auto" }}>
       <MenuList sx={{display: "flex",paddingTop:"0px",paddingBottom:"0px"}} >
         <MenuItem onClick={addNewTask} sx={{minHeight:"10px",paddingRight:"0px"}}>
-          <ListItemIcon>
+          <ListItemIcon  className="overlay">
             <AddIcon fontSize="small" sx={{fill: "var(--text-color)"}} />
           </ListItemIcon>
         </MenuItem>
@@ -212,7 +213,7 @@ return (
   
   </div>
 )
-        };
+};
 
 
 export default CardWithTasks;

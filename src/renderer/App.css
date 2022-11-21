@@ -323,6 +323,10 @@ Note: Beware of modifying this element as it can break the animations - you shou
     border: 1px solid #dfdfdf;
 }
 
+.overlay {
+    z-index: -1
+}
+
 .progress_session {
     width: 250px;
     height: 250px;

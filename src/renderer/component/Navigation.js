@@ -10,15 +10,14 @@ import { ReactComponent as BellIcon } from '../../../assets/icons/bell.svg';
 import { ReactComponent as ChevronIcon } from '../../../assets/icons/chevron.svg';
 import { ReactComponent as MenuIcon } from '../../../assets/icons/menu.svg';
 import React, { useState, useEffect, useRef } from 'react';
+import { Link, useParams, useLocation, useNavigate } from 'react-router-dom'
 import { CSSTransition } from 'react-transition-group';
 
 function Apps() {
   return (
     <Navbar>
-      {/* <NavItem icon={<PlusIcon />} /> */}
-      {/* <NavItem icon={<BellIcon />} />
-       <NavItem icon={<MessengerIcon />} /> */}
-        <div className='title' >Clock Application</div>
+      
+        <div className='title' >Task Manager</div>
       <NavItem icon={<MenuIcon />}>
         <DropdownMenu></DropdownMenu>
       </NavItem> 
@@ -52,6 +51,7 @@ function NavItem(props) {
 function DropdownMenu() {
   const [activeMenu, setActiveMenu] = useState('main');
   const [menuHeight, setMenuHeight] = useState(null);
+  const navigate = useNavigate();
   const dropdownRef = useRef(null);
 
   useEffect(() => {
@@ -62,10 +62,22 @@ function DropdownMenu() {
     const height = el.offsetHeight;
     setMenuHeight(height);
   }
+  const onClickHandler= (props) =>
+  {
+    console.log(props);
+    if(props.gotoPage=="main"){
+        navigate(`/`);
+    }
+    if(props.gotoPage=="timer"){
+      navigate(`timer`);
+    }
+    setActiveMenu(props.goToMenu)
+    
+  }
 
   function DropdownItem(props) {
     return (
-      <a href="#" className="menu-item" onClick={() => props.goToMenu && setActiveMenu(props.goToMenu)}>
+      <a href="#" className="menu-item" onClick={()=>onClickHandler(props)}>
         <span className="icon-button">{props.leftIcon}</span>
         {props.children}
         <span className="icon-right">{props.rightIcon}</span>
@@ -84,16 +96,25 @@ function DropdownMenu() {
         onEnter={calcHeight}>
         <div className="menu">
           <DropdownItem
+          goToMenu="main"
+          gotoPage="main"
           leftIcon={<SesssionIcon></SesssionIcon>}
-          >Focus sessions</DropdownItem>
+          >
+            Focus sessions
+          </DropdownItem>
           <DropdownItem
+            goToMenu="main"
+            gotoPage="timer"
             leftIcon={<TimerIcon />}
-            rightIcon={<ChevronIcon />}
+            // rightIcon={<ChevronIcon />}
             // goToMenu="settings"
             >
             Timer
           </DropdownItem>
           <DropdownItem
+            // goToMenu="alarm"
+            goToMenu="main"
+            gotoPage="alarm"
             leftIcon={<AlarmIcon/>}
             rightIcon={<ChevronIcon />}
             // goToMenu="animals"
@@ -101,6 +122,8 @@ function DropdownMenu() {
             Alarm
           </DropdownItem>
           <DropdownItem
+            goToMenu="main"
+            gotoPage="stopwatch"
             leftIcon={<StopwatchIcon/>}
             rightIcon={<ChevronIcon />}
             // goToMenu="animals"
@@ -108,57 +131,27 @@ function DropdownMenu() {
             Stopwatch
           </DropdownItem>
           <DropdownItem
+            goToMenu="main"
+            gotoPage="clock"
             leftIcon={<ClockIcon/>}
             rightIcon={<ChevronIcon />}
             // goToMenu="animals"
             >
             World clock
           </DropdownItem>
-
           <DropdownItem
+            goToMenu="main"
+            gotoPage="settings"
             leftIcon={<SettingIcon/>}
             rightIcon={<ChevronIcon />}
             // goToMenu="animals"
             >
             Settings
           </DropdownItem>
-
         </div>
       </CSSTransition>
 
-      {/* <CSSTransition
-        in={activeMenu === 'settings'}
-        timeout={500}
-        classNames="menu-secondary"
-        unmountOnExit
-        onEnter={calcHeight}>
-        <div className="menu">
-          <DropdownItem goToMenu="main" leftIcon={<ArrowIcon />}>
-            <h2>My Tutorial</h2>
-          </DropdownItem>
-          <DropdownItem leftIcon={<BoltIcon />}>HTML</DropdownItem>
-          <DropdownItem leftIcon={<BoltIcon />}>CSS</DropdownItem>
-          <DropdownItem leftIcon={<BoltIcon />}>JavaScript</DropdownItem>
-          <DropdownItem leftIcon={<BoltIcon />}>Awesome!</DropdownItem>
-        </div>
-      </CSSTransition> */}
-
-      {/* <CSSTransition
-        in={activeMenu === 'animals'}
-        timeout={500}
-        classNames="menu-secondary"
-        unmountOnExit
-        onEnter={calcHeight}>
-        <div className="menu">
-          <DropdownItem goToMenu="main" leftIcon={<ArrowIcon />}>
-            <h2>Animals</h2>
-          </DropdownItem>
-          <DropdownItem leftIcon="🦘">Kangaroo</DropdownItem>
-          <DropdownItem leftIcon="🐸">Frog</DropdownItem>
-          <DropdownItem leftIcon="🦋">Horse?</DropdownItem>
-          <DropdownItem leftIcon="🦔">Hedgehog</DropdownItem>
-        </div>
-      </CSSTransition> */}
+  
     </div>
   );
 }
