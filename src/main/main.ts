@@ -13,8 +13,13 @@ import { app, BrowserWindow, shell, ipcMain } from 'electron';
 import { autoUpdater } from 'electron-updater';
 import log from 'electron-log';
 import MenuBuilder from './menu';
+import installExtension, { REDUX_DEVTOOLS,REACT_DEVELOPER_TOOLS } from 'electron-devtools-installer';
 import { resolveHtmlPath } from './util';
-
+app.whenReady().then(() => {
+    installExtension([REDUX_DEVTOOLS, REACT_DEVELOPER_TOOLS])
+        .then((name) => console.log(`Added Extension:  ${name}`))
+        .catch((err) => console.log('An error occurred: ', err));
+});
 class AppUpdater {
   constructor() {
     log.transports.file.level = 'info';
@@ -58,7 +63,7 @@ const installExtensions = async () => {
 
 const createWindow = async () => {
   if (isDebug) {
-    await installExtensions();
+    // await installExtensions();
   }
 
   const RESOURCES_PATH = app.isPackaged
@@ -92,6 +97,21 @@ const createWindow = async () => {
   });
 
   mainWindow.loadURL(resolveHtmlPath('index.html'));
+
+
+    //  if (isDebug) {
+
+    //     // Errors are thrown if the dev tools are opened
+    //     // before the DOM is ready
+    //     mainWindow.webContents.once("dom-ready", async () => {
+    //         await installExtension([REDUX_DEVTOOLS, REACT_DEVELOPER_TOOLS])
+    //             .then((name) => console.log(`Added Extension:  ${name}`))
+    //             .catch((err) => console.log("An error occurred: ", err))
+    //             .finally(() => {
+    //                 // mainWindow.webContents.openDevTools();
+    //             });
+    //     });
+    // }
 
   mainWindow.on('ready-to-show', () => {
     if (!mainWindow) {
